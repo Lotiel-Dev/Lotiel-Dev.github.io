@@ -8,14 +8,16 @@
 </head>
 <body>
     <div class="container">
-        <h1>Buscar Aula y Número de Mesa</h1>
-        <h1>Ingresa tu apellido</h1>
-        <input type="text" id="searchInput" placeholder="Apellido">
+        <div class="titulos">
+            <h1>Consulta tu Aula y Número de Mesa</h1>
+            <h2>Ingresa tu nombre y apellidos</h2>
+        </div>
+        <input type="text" id="searchInput" placeholder="Ejemplo: Juan Perez Morales">
         <button onclick="buscar()">Buscar</button>
         
         <p id="resultado"></p>
         
-        <button id="toggleButton" onclick="toggleTable()">Mostrar Tabla Completa</button>
+        <button id="toggleButton" onclick="toggleTable()">Mostrar Tabla de mesas</button>
 
         <div class="table-responsive" id="tableContainer" style="display: none;">
             <table id="dataTable">
@@ -81,6 +83,9 @@
                 </tbody>
             </table>
         </div>
+        <footer>
+            © 2023 Sistema de Consulta de Aulas y Mesas
+        </footer>
     </div>
 
     <script src="script.js"></script>
