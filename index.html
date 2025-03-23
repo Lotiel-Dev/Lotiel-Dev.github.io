@@ -1,50 +1,89 @@
+-->
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página Random Responsive</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #f0f0f0;
-        }
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            border-radius: 5px;
-        }
-        .content {
-            margin-bottom: 20px;
-        }
-        @media only screen and (max-width: 600px) {
-            .container {
-                padding: 10px;
-            }
-        }
-    </style>
+    <title>Búsqueda de Aula y Mesa</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>Página Random Responsive</h1>
-        <div class="content">
-            <h2>Contenido Aleatorio 1</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.</p>
-        </div>
-        <div class="content">
-            <h2>Contenido Aleatorio 2</h2>
-            <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-        </div>
-        <div class="content">
-            <h2>Contenido Aleatorio 3</h2>
-            <p>Nullam id dolor id nibh ultricies vehicula ut id elit. Cras mattis consectetur purus sit amet fermentum.</p>
+        <h1>Buscar Aula y Número de Mesa</h1>
+        <h1>Ingresa tu apellido</h1>
+        <input type="text" id="searchInput" placeholder="Apellido">
+        <button onclick="buscar()">Buscar</button>
+        
+        <p id="resultado"></p>
+        
+        <button id="toggleButton" onclick="toggleTable()">Mostrar Tabla Completa</button>
+
+        <div class="table-responsive" id="tableContainer" style="display: none;">
+            <table id="dataTable">
+                <thead>
+                    <tr>
+                        <th>NRO MESA</th>
+                        <th>NOMBRE MESA</th>
+                        <th>APELLIDO INICIO</th>
+                        <th>APELLIDO FINAL</th>
+                        <th>AULA</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>4</td>
+                        <td>ABALOS ROSSO - CAMACHO HUANCA MA. JULIETA</td>
+                        <td>ABALOS ROSSO</td>
+                        <td>CAMACHO HUANCA MA. JULIETA</td>
+                        <td>507</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>CAMACHO KOYO - CUENCA FELIPE</td>
+                        <td>CAMACHO KOYO</td>
+                        <td>CUENCA FELIPE</td>
+                        <td>508</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>CUENTAS AGUILAR - HUANCA LUMPE</td>
+                        <td>CUENTAS AGUILAR</td>
+                        <td>HUANCA LUMPE</td>
+                        <td>509</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>HUANCA MAMANI - MENDOZA CHOQUE</td>
+                        <td>HUANCA MAMANI</td>
+                        <td>MENDOZA CHOQUE</td>
+                        <td>512</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>MENDOZA COLQUE - QUISPE GUZMAN</td>
+                        <td>MENDOZA COLQUE</td>
+                        <td>QUISPE GUZMAN</td>
+                        <td>512</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>QUISPE HUANCA - TARQUI VARGAS</td>
+                        <td>QUISPE HUANCA</td>
+                        <td>TARQUI VARGAS</td>
+                        <td>513</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>TEJERINA CHACA - ZURITA VEIZAGA</td>
+                        <td>TEJERINA CHACA</td>
+                        <td>ZURITA VEIZAGA</td>
+                        <td>514</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
